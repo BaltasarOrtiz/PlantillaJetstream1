@@ -79,28 +79,28 @@
             <x-slot name="content">
                 <div class="mb-4">
                     <x-label value="Nombre del Producto" />
-                    <x-input wire:model.live="producto.title" type="text" class="w-full"/>
-                    <x-input-error for="producto.title"/>
+                    <x-input wire:model.live="producto2.title" type="text" class="w-full"/>
+                    <x-input-error for="producto2.title"/>
                 </div>
                 <div class="mb-4">
                     <x-label value="Precio del Producto"/>
-                    <x-input wire:model.live="producto.precio" type="text" class="w-full"/>
-                    <x-input-error for="producto.precio"/>
+                    <x-input wire:model.live="producto2.precio" type="text" class="w-full"/>
+                    <x-input-error for="producto2.precio"/>
                 </div>
                 <div class="mb-4">
                     <x-label value="Stock"/>
-                    <x-input wire:model.live="producto.stock" type="text" class="w-full"/>
-                    <x-input-error for="producto.stock"/>
+                    <x-input wire:model.live="producto2.stock" type="text" class="w-full"/>
+                    <x-input-error for="producto2.stock"/>
                 </div>
                 <div class="mb-4">
                     <x-label value="Descripcion del Producto"/>
-                    <textarea wire:model.live="producto.descripcion" class="w-full border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm" cols="30" rows="10"></textarea>
-                    <x-input-error for="producto.descripcion"/>
+                    <textarea wire:model.live="producto2.descripcion" class="w-full border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm" cols="30" rows="10"></textarea>
+                    <x-input-error for="producto2.descripcion"/>
                 </div>
                 <div class="mb-4">
                     <x-label value="Categoria del Producto"/>
-                    <x-input wire:model.live="producto.categoria" type="text" class="w-full"/>
-                    <x-input-error for="producto.categoria"/>
+                    <x-input wire:model.live="producto2.categoria" type="text" class="w-full"/>
+                    <x-input-error for="producto2.categoria"/>
                 </div>
 
             </x-slot>

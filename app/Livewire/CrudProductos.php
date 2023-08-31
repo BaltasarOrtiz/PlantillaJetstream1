@@ -10,20 +10,23 @@ use Livewire\WithPagination;
 class CrudProductos extends Component
 {
     use WithPagination;
-    public $search='', $producto;
+    public $search='', $producto, $producto2;
     public $open=false;
     public $sort = 'id';
     public $direction = 'desc';
 
     public $forSave;
 
+
     protected $rules = [
-        'producto.title' => 'required',
-        'producto.descripcion' => 'required',
-        'producto.precio' => 'required',
-        'producto.stock' => 'required',
-        'producto.categoria' => 'required',
+        'producto2.title' => 'required',
+        'producto2.descripcion' => 'required',
+        'producto2.precio' => 'required',
+        'producto2.stock' => 'required',
+        'producto2.categoria' => 'required',
     ];
+
+
 
     public function render()
     {
@@ -49,19 +52,22 @@ class CrudProductos extends Component
 
     public function mount(){
         $this->producto = Producto::all();
+        $this->producto2 = Producto::all();
     }
     public function updatingSearch(){
         $this->resetPage();
     }
-    public function editar($p){
-        $this->producto = $p;
+    public function editar(Producto $p){
+        $this->producto2 = $p->toArray(); #para mostrar en la vista
+        $this->producto = $p; #para guardar el modelo en la base de datos
         $this->open = true;
     }
     public function guardar(){
+        $this->producto->update($this->producto2);
         $this->validate();
         $this->producto->save();
         $this->reset(['open']);
-        #$this->emit('alerta', 'El producto se actualizo correctamente');
     }
+
 
 }
