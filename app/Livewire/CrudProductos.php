@@ -10,7 +10,7 @@ use Livewire\WithPagination;
 class CrudProductos extends Component
 {
     use WithPagination;
-    public $search='', $producto, $producto2;
+    public $search='', $producto, $producto2, $image;
     public $open=false;
     public $sort = 'id';
     public $direction = 'desc';

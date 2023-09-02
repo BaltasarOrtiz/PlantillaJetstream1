@@ -28,7 +28,12 @@ class MostrarProductos extends Component
     }
 
     public function mount(){
-        $this->producto = Producto::first();
+        $producto = Producto::first();
+        if ($producto){
+            $this->producto = $producto;
+        }else{
+            $this->producto = null;
+        }
     }
     public function updatingSearch(){
         $this->resetPage();

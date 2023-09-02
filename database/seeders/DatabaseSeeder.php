@@ -24,6 +24,6 @@ class DatabaseSeeder extends Seeder
         Storage::deleteDirectory('public/productos');
         //crea si no existe
         Storage::makeDirectory('public/productos');
-        \App\Models\Producto::factory(30)->create();
+        \App\Models\Producto::factory(5)->create();
     }
 }
